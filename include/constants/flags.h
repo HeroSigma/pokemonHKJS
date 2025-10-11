@@ -1330,14 +1330,14 @@
 #define FLAG_DEFEATED_RED                                           0x4F8
 
 #define FLAG_VISITED_BATTLE_FRONTIER                                0x4F9
-#define FLAG_HIDE_BATTLE_FRONTIER_RECEPTION_GATE_SCOTT              0x4FA // Unused Flag
+#define FLAG_HIDE_BATTLE_FRONTIER_RECEPTION_GATE_SCOTT              0x4FA
 
 #define FLAG_DEFEATED_ELITE_4_WILL                                  0x4FB
 #define FLAG_DEFEATED_ELITE_4_KOGA                                  0x4FC
 #define FLAG_DEFEATED_ELITE_4_BRUNO                                 0x4FD
 #define FLAG_DEFEATED_ELITE_4_KAREN                                 0x4FE
 
-#define FLAG_UNUSED_0x4FF                                           0x4FF // Unused Flag
+#define FLAG_FRONTIER_SECOND_CLERK                                  0x4FF
 
 // Trainer Flags
 // Trainer flags occupy 0x500 - 0x85F, the last 9 of which are unused
