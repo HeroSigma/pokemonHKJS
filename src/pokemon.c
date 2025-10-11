@@ -10554,11 +10554,11 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PIKE_QUEEN:
         case TRAINER_CLASS_PYRAMID_KING:
             if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 0)
-                return MUS_VS_FRONTIER_BRAIN;
+                return MUS_HG_VS_FRONTIER_BRAIN;
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1)
-                return MUS_VS_FRONTIER_BRAIN;
+                return MUS_HG_VS_FRONTIER_BRAIN;
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2)
-                return MUS_PL_VS_FRONTIER_BRAIN;
+                return MUS_HG_VS_FRONTIER_BRAIN;
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 3)
                 return MUS_HG_VS_FRONTIER_BRAIN;
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 4)
@@ -10566,13 +10566,13 @@ u16 GetBattleBGM(void)
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 5)
             {
                 if((Random() % 3) == 1)
-                    return MUS_PL_VS_FRONTIER_BRAIN;
+                    return MUS_HG_VS_FRONTIER_BRAIN;
                 if((Random() % 3) == 2)
                     return MUS_HG_VS_FRONTIER_BRAIN;
                 else
-                    return MUS_VS_FRONTIER_BRAIN;
+                    return MUS_HG_VS_FRONTIER_BRAIN;
             }
-            return MUS_VS_FRONTIER_BRAIN;
+            return MUS_HG_VS_FRONTIER_BRAIN;
         case TRAINER_CLASS_TEAM_ROCKET:
             return MUS_HG_VS_ROCKET;
         case TRAINER_CLASS_ROCKET_ADMIN:
