@@ -1236,7 +1236,7 @@ static const u8 sSilverWingDesc[] = _(
 
 static const u8 sRageCandyBarDesc[] = _(
     "A famous candy in\n"
-    "Mahogany Town");
+    "Mahogany Town.");
 
 static const u8 sTidalBellDesc[] = _(
     "Old-fashioned bell\n"
