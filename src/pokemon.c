@@ -10641,8 +10641,14 @@ u16 GetBattleBGM(void)
             return MUS_RG_VS_WILD;
         else if (gSaveBlock2Ptr->optionsWildBattleMusic == 2)
             return MUS_DP_VS_WILD;
-        else if (gSaveBlock2Ptr->optionsWildBattleMusic == 3)
-            return MUS_HG_VS_WILD;
+        else if (gSaveBlock2Ptr->optionsWildBattleMusic == 3)	// this is what is used ingame
+            if (gMapHeader.region == REGION_KANTO)
+			{
+			   return MUS_HG_VS_WILD_KANTO;
+			} 
+			else {
+			   return MUS_HG_VS_WILD;
+			}
         else if (gSaveBlock2Ptr->optionsWildBattleMusic == 4)
             return MUS_HG_VS_WILD_KANTO;
         else if (gSaveBlock2Ptr->optionsWildBattleMusic == 5)
