@@ -61,7 +61,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
-      "x": 8,
+      "x": 11,
       "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -74,7 +74,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
-      "x": 7,
+      "x": 10,
       "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -87,7 +87,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
-      "x": 6,
+      "x": 9,
       "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -123,19 +123,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleTower_Outside_ExchangeServiceCorner_EventScript_VitaminClerk",
       "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ENGINEER",
-      "x": 14,
-      "y": 9,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "BattleTower_Outside_EventScript_Engineer",
-      "flag": "FLAG_HIDE_BATTLEFRONTIER_ENGINEER"
     }
   ],
   "warp_events": [
@@ -147,21 +134,21 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 9,
+      "x": 6,
       "y": 12,
       "elevation": 0,
       "dest_map": "MAP_FALLARBOR_TOWN_BATTLE_TENT_LOBBY",
       "dest_warp_id": "0"
     },
     {
-      "x": 10,
+      "x": 14,
       "y": 12,
       "elevation": 0,
       "dest_map": "MAP_VERDANTURF_TOWN_BATTLE_TENT_LOBBY",
       "dest_warp_id": "0"
     },
     {
-      "x": 11,
+      "x": 21,
       "y": 12,
       "elevation": 0,
       "dest_map": "MAP_SLATEPORT_CITY_BATTLE_TENT_LOBBY",
