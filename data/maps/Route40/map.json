@@ -25,7 +25,7 @@
     },
     {
       "map": "MAP_BATTLE_TOWER_OUTSIDE",
-      "offset": -1,
+      "offset": -2,
       "direction": "up"
     }
   ],
