@@ -3255,5 +3255,26 @@ bool8 ScrCmd_givebp(struct ScriptContext *ctx)
     return FALSE;
 }
 
+bool8 ScrCmd_checknuzlocke(struct ScriptContext *ctx)
+{
+    if(gSaveBlock1Ptr->tx_Challenges_Nuzlocke==1){
+        gSpecialVar_Result = TRUE;
+    }
+    else
+    {
+        gSpecialVar_Result = FALSE;
+    }     
+    return FALSE;
+}
 
-
+bool8 ScrCmd_checkrandomizer(struct ScriptContext *ctx)
+{
+    if(gSaveBlock1Ptr->tx_Random_Moves==1){
+        gSpecialVar_Result = TRUE;
+    }
+    else
+    {
+        gSpecialVar_Result = FALSE;
+    }     
+    return FALSE;
+}

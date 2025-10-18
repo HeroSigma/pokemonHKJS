@@ -1836,6 +1836,18 @@
 	.2byte \number
 	.endm
 
+	@ Returns 1 if randomizer is active
+	.macro checknuzlocke
+	.byte 0xf4
+	.byte 0xf4
+	.endm
+
+	@ Returns 1 if randomizer is active
+	.macro checkrandomizer
+	.byte 0xf5
+	.byte 0xf5
+	.endm
+
 	.macro _dynmultichoice left:req, top:req, ignoreBPress:req, maxBeforeScroll:req, shouldSort:req, initialSelected:req, callbacks:req argv:vararg
 	.byte 0xf1
 	.2byte \left
