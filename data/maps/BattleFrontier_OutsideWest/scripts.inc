@@ -18,6 +18,32 @@ BattleFrontier_OutsideWest_OnTransition:
 	setflag FLAG_HIDE_BATTLE_TOWER_REPORTER
 	end
 
+BattleFrontier_OutsideWest_EventScript_Sailor::
+	lock
+	faceplayer
+	msgbox BattleFrontierOutsideWest_Text_SailorReturn, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_OutsideWest_AsYouLike
+	msgbox EventTicket_Text_SailHome, MSGBOX_DEFAULT
+	closemessage
+	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	delay 30
+	hideobjectat LOCALID_FERRY_ATTENDANT, MAP_BATTLE_FRONTIER_OUTSIDE_WEST
+	setvar VAR_0x8004, LOCALID_SS_TIDAL
+	call Common_EventScript_FerryDepartIsland
+	warpsilent MAP_VERMILION_CITY_PORT_INSIDE, 8, 9
+	waitstate
+	release
+	end
+
+BattleFrontier_OutsideWest_AsYouLike::
+	msgbox EventTicket_Text_AsYouLike, MSGBOX_DEFAULT
+	release
+	end
+
+BattleFrontierOutsideWest_Text_SailorReturn:
+	.string "Do you want to return to VERMILION?$"
+
 BattleFrontier_OutsideWest_EventScript_FerryAttendant::
 	lock
 	faceplayer
