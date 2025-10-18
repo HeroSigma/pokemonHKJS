@@ -513,7 +513,7 @@ static const u8 sText_ItemDrop[]            = _("ITEM DROP");
 static const u8 sText_EasyFeebas[]          = _("{COLOR 3}{SHADOW 3}EASIER FEEBAS");
 static const u8 sText_Pkmn_Death[]          = _("{COLOR 7}{COLOR 8}PERMA FAINT"); //Original Color is {COLOR 7}{COLOR 8}
 static const u8 sText_Unlimited_WT[]        = _("{COLOR 3}{SHADOW 3}UNLIMITED WT");
-static const u8 sText_FrontierBans[]        = _("{COLOR 3}{SHADOW 3}FRONTIER BANS");
+static const u8 sText_FrontierBans[]        = _("FRONTIER BANS");
 
 // Menu left side option names text
 static const u8 *const sOptionMenuItemsNamesFeatures[MENUITEM_FEATURES_COUNT] =
@@ -680,7 +680,7 @@ static bool8 CheckConditions(int selection)
             case MENUITEM_FEATURES_PKMN_DEATH:              return !sOptions->sel_nuzlocke[MENUITEM_NUZLOCKE_NUZLOCKE];
             //case MENUITEM_FEATURES_UNLIMITED_WT:            return FALSE;
             //case MENUITEM_FEATURES_EASY_FEEBAS:             return FALSE;
-            case MENUITEM_FEATURES_FRONTIER_BANS:           return FALSE;
+            //case MENUITEM_FEATURES_FRONTIER_BANS:           return FALSE;
             default:       return TRUE;
         }
     case MENU_RANDOMIZER:
@@ -843,7 +843,7 @@ static const u8 sText_Description_Random_WildPokemon_On[]           = _("Randomi
 static const u8 sText_Description_Random_Trainer_Off[]              = _("Trainer will have their expected\nparty.");
 static const u8 sText_Description_Random_Trainer_On[]               = _("Randomize enemy trainer parties.");
 static const u8 sText_Description_Random_Static_Off[]               = _("Static encounter will be the same\nas in the base game.");
-static const u8 sText_Description_Random_Static_On[]                = _("Randomize static encounter POKéMON.");
+static const u8 sText_Description_Random_Static_On[]                = _("Randomize static {PKMN} encounters.\nSome special {PKMN} stay unchanged!");
 static const u8 sText_Description_Random_BalanceTiers_Off[]         = _("Distribution of POKéMON {COLOR 7}{COLOR 8}not balanced{COLOR 1}{COLOR 2}\naround their strength!");
 static const u8 sText_Description_Random_BalanceTiers_On[]          = _("{PKMN} replaced with similar tiered ones.\nCurrently based on evo stages.");
 static const u8 sText_Description_Random_IncludeLegendaries_Off[]   = _("Legendary POKéMON will not be\nincluded and randomized.");
@@ -1024,7 +1024,7 @@ static const u8 *const sOptionMenuItemDescriptionsDisabledFeatures[MENUITEM_FEAT
     //[MENUITEM_FEATURES_EASY_FEEBAS]           = sText_Description_Disabled_Feature,
     [MENUITEM_FEATURES_PKMN_DEATH]            = sText_Description_Disabled_Features_PkmnDeath,
     //[MENUITEM_FEATURES_UNLIMITED_WT]          = sText_Description_Disabled_Feature,
-    [MENUITEM_FEATURES_FRONTIER_BANS]         = sText_Description_Disabled_Feature,
+    [MENUITEM_FEATURES_FRONTIER_BANS]         = sText_Empty,
     [MENUITEM_FEATURES_NEXT]                  = sText_Empty,
 };
 
@@ -3151,8 +3151,8 @@ static void DrawChoices_Features_FrontierBans(int selection, int y)
         gSaveBlock1Ptr->tx_Features_FrontierBans = 1; //Unban
     }
 
-    //DrawOptionMenuChoice(sText_Features_Frontier_Ban, 104, y, styles[0], active);
-    //DrawOptionMenuChoice(sText_Features_Frontier_UnBan, GetStringRightAlignXOffset(1, sText_Features_Frontier_UnBan, 198), y, styles[1], active);
+    DrawOptionMenuChoice(sText_Features_Frontier_Ban, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_Features_Frontier_UnBan, GetStringRightAlignXOffset(1, sText_Features_Frontier_UnBan, 198), y, styles[1], active);
 }
 
 /*static const u8 sText_Difficulty_HardExp_Enabled[]   = _("DEFAULT");
