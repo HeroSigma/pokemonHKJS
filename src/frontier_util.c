@@ -700,6 +700,9 @@ static const u8 sFrontierBrainObjEventGfx[NUM_FRONTIER_FACILITIES][2] =
     [FRONTIER_FACILITY_PYRAMID] = {OBJ_EVENT_GFX_BRANDON, FALSE},
 };
 
+
+//HnS uses gFrontierBannedSpeciesNormal list when using "Frontier Bans" set to "Ban", and the "gFrontierBannedSpeciesEasy" when set to "Unban"
+//Hardmode list is not used in HnS.
 const u16 gFrontierBannedSpeciesNormal[] =
 {
         SPECIES_MEWTWO, SPECIES_HO_OH, SPECIES_LUGIA,
