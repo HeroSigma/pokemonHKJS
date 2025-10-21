@@ -405,7 +405,7 @@ static const s8 sCenterToCornerVecXs[8] ={-32, -16, -16, -32, -32};
 // 10 is ×1.0 TYPE_MUL_NORMAL
 // 05 is ×0.5 TYPE_MUL_NOT_EFFECTIVE
 // 00 is ×0.0 TYPE_MUL_NO_EFFECT
-const u8 gTypeEffectiveness[354] =
+const u8 gTypeEffectiveness[354] = //New type effectiveness from Modern Emerald 3.2+, NOT enabled in HnS.
 {
     TYPE_NORMAL, TYPE_ROCK, TYPE_MUL_NOT_EFFECTIVE,
     TYPE_NORMAL, TYPE_STEEL, TYPE_MUL_NOT_EFFECTIVE,
@@ -537,7 +537,7 @@ const u8 gTypeEffectiveness[354] =
     TYPE_ENDTABLE, TYPE_ENDTABLE, TYPE_MUL_NO_EFFECT
 };
 
-const u8 gTypeEffectiveness_Old[366] = //Modern Emerald 3.1 chart
+const u8 gTypeEffectiveness_Old[366] = //Gen 6 type chart, and it's the one read by HnS by default.
 {
     TYPE_NORMAL, TYPE_ROCK, TYPE_MUL_NOT_EFFECTIVE,
     TYPE_NORMAL, TYPE_STEEL, TYPE_MUL_NOT_EFFECTIVE,
@@ -664,7 +664,7 @@ const u8 gTypeEffectiveness_Old[366] = //Modern Emerald 3.1 chart
     TYPE_ENDTABLE, TYPE_ENDTABLE, TYPE_MUL_NO_EFFECT
 };
 
-/*const u8 gTypeEffectiveness_Old[372] = //Original Type match up, but with fairy type added. Disabled.
+/*const u8 gTypeEffectiveness_Old[372] = //Gen 3 type effectiveness + fairy type. Disabled.
 {
     TYPE_NORMAL, TYPE_ROCK, TYPE_MUL_NOT_EFFECTIVE,
     TYPE_NORMAL, TYPE_STEEL, TYPE_MUL_NOT_EFFECTIVE,
