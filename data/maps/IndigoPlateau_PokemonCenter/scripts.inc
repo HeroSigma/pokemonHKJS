@@ -7,6 +7,7 @@ IndigoPlateau_PokemonCenter_MapScripts::
 	.byte 0
 
 IndigoPlateau_PokemonCenter_OnFrame::
+	setrespawn HEAL_LOCATION_INDIGO_PLATEAU
 	map_script_2 VAR_LEAGUE_STATE, 0, IndigoPlateau_PokemonCenter_Enter
 	map_script_2 VAR_LEAGUE_STATE, 2, IndigoPlateau_PokemonCenter_Enter
 	map_script_2 VAR_LEAGUE_STATE, 3, IndigoPlateau_PokemonCenter_Enter
@@ -39,7 +40,7 @@ IndigoPlateau_Text_ShigyNinja:
 	.string "all of them are wonderfully unique.\p"
 	.string "You should be proud of yourself\n"
 	.string "for getting this far!\p"
-	.string "Now, go get em'!$"
+	.string "Now, go get 'em!$"
 
 IndigoPlateau_Text_Blackbelt:
 	.string "The POKéMON LEAGUE is not taking\n"
