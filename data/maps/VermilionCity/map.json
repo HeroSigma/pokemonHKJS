@@ -654,6 +654,33 @@
       "var": "VAR_SUICUNE_ENCOUNTERS",
       "var_value": "3",
       "script": "VermilionCity_TriggerSuicuneBot"
+    },
+    {
+      "type": "trigger",
+      "x": 49,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_SUICUNE_ENCOUNTERS",
+      "var_value": "3",
+      "script": "VermilionCity_TriggerSuicuneNorth_Left"
+    },
+    {
+      "type": "trigger",
+      "x": 50,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_SUICUNE_ENCOUNTERS",
+      "var_value": "3",
+      "script": "VermilionCity_TriggerSuicuneNorth_Mid"
+    },
+    {
+      "type": "trigger",
+      "x": 51,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_SUICUNE_ENCOUNTERS",
+      "var_value": "3",
+      "script": "VermilionCity_TriggerSuicuneNorth_Right"
     }
   ],
   "bg_events": [
