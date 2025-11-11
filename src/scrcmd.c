@@ -3255,9 +3255,9 @@ bool8 ScrCmd_givebp(struct ScriptContext *ctx)
     return FALSE;
 }
 
-bool8 ScrCmd_checknuzlocke(struct ScriptContext *ctx)
+bool8 ScrCmd_checknuzlocke(struct ScriptContext *ctx) //untested, unused
 {
-    if(gSaveBlock1Ptr->tx_Challenges_Nuzlocke==1){
+    if(gSaveBlock1Ptr->tx_Challenges_Nuzlocke>=1){
         gSpecialVar_Result = TRUE;
     }
     else
