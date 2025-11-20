@@ -20,6 +20,7 @@
 #include "gba/m4a_internal.h"
 #include "constants/rgb.h"
 #include "event_data.h"
+#include "tx_randomizer_and_challenges.h"
 
 // ---- Paging ----
 enum
