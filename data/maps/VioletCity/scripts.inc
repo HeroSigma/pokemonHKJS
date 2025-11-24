@@ -485,7 +485,7 @@ VioletCity_Text_Kimono_Girl2:
 .string "Now I get it...$"
 
 VioletCity_Text_Kimono_Girl3:
-.string "That Egg is truly an important Egg.\p"
+.string "That EGG is truly an important EGG.\p"
 .string "Please do take good care of it\n"
 .string "for me. Is that understood?$"
 
