@@ -278,7 +278,7 @@ NewBarkTown_EventScript_ElmsHouseMailbox::
 	end
 
 NewBarkTown_Text_PlayersHouse:
-	.string "{PLAYER}'s House$"
+	.string "{PLAYER}'S HOUSE$"
 
 NewBarkTown_Text_ElmsHouse:
-	.string "PROF.ELM's House$"
+	.string "PROF.ELM'S HOUSE$"
