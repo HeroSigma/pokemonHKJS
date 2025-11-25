@@ -710,7 +710,7 @@ IlexForest_Text_ApprenticeIntro:
 
 IlexForest_Text_ApprenticeAfter:
 	.string "Wow! Thanks a whole bunch!\p"
-	.string "My boss's POKéMON won't obey me\n"
+	.string "My boss' POKéMON won't obey me\n"
 	.string "because I don't have a BADGE.$"
 
 IlexForest_Text_ItsTheMissingPokemon:
