@@ -538,6 +538,11 @@ RocketHideout_B2F_EventScript_ElectrodeDone::
 	setvar VAR_MAHOGANY_TOWN_STATE, 14
 	clearflag FLAG_HIDE_MAHOGANY_COP
 	setflag FLAG_HIDE_MAHOGANY_TOWN_FATMAN
+	setvar VAR_ROCKET_HIDEOUT_STATUE_1, 2
+	setvar VAR_ROCKET_HIDEOUT_STATUE_2, 2
+	setvar VAR_ROCKET_HIDEOUT_STATUE_3, 2
+	setvar VAR_ROCKET_HIDEOUT_STATUE_4, 2
+	setvar VAR_ROCKET_HIDEOUT_STATUE_5, 2
 	release
 	end
 
@@ -623,7 +628,7 @@ RocketHideout_Text_LanceStepBack:
     .string "Sorry, {PLAYER}. I saw how well you\n"
     .string "were doing, so I just hung back.\p"
     .string "Now all there is left to do is to turn\n"
-    .string "off that odd RADIO signal.$"
+    .string "off that odd radio signal.$"
 
 
 RocketHideout_B2F_Text_LanceElectrodeFaint:
@@ -678,12 +683,12 @@ RocketHideout_B2F_Text_LanceMonMaster:
     .string "again!$"
 
 RocketHideout_B2F_Text_B2FTransmitter:
-    .string "It's the RADIO transmitter that's\n"
+    .string "It's the radio transmitter that's\n"
     .string "sending the sinister signal.\p"
     .string "It's working at full capacity.$"
 
 RocketHideout_B2F_Text_B2FDeactivateTransmitter:
-    .string "The RADIO transmitter has finally\n"
+    .string "The radio transmitter has finally\n"
     .string "stopped its evil broadcast.$"
 
 
