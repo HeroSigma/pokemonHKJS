@@ -112,6 +112,19 @@ bool8 IsNuzlockeNicknamingActive(void)
     return gSaveBlock1Ptr->tx_Nuzlocke_Nicknaming;
 }
 
+
+void ToggleShinyColors(void)
+{
+    if (gSaveBlock1Ptr->tx_Features_ShinyColors == 1)
+    {
+        gSaveBlock1Ptr->tx_Features_ShinyColors = 0; //Old shinies
+    }
+    else
+    {
+        gSaveBlock1Ptr->tx_Features_ShinyColors = 1; //New shinies
+    }
+}
+
 bool8 IsPokecenterChallengeActivated(void)
 {
     return gSaveBlock1Ptr->tx_Challenges_PkmnCenter;
