@@ -135,7 +135,7 @@ Route40_Text_MonicaGivesGift:
 
 Route40_Text_MonicaGaveGift:
 	.string "MONICA: It's an item that raises\n"
-	.string "the power of FLYING-TYPE moves.\p"
+	.string "the power of FLYING-type moves.\p"
 	.string "You should equip a bird\n"
 	.string "POKéMON with that item.$"
 
