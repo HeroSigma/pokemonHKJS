@@ -286,7 +286,7 @@ RocketHideout_B2F_Text_LanceInterrupt:
 RocketHideout_B2F_Text_ArianaOutraged:
     .string "ARIANA: What? You had an accomplice?\n"
     .string "Where is your sense of dignity?\p"
-    .string "As interim boss in place of Giovanni,\n"
+    .string "As interim boss in place of GIOVANNI,\n"
     .string "I'll show you how wrong it is to meddle\l"
     .string "with Team Rocket!$"
 

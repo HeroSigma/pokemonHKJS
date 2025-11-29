@@ -605,7 +605,7 @@ RocketHideout_B3F_Text_PetrelBeaten:
 RocketHideout_B3F_Text_PetrelAfterBattle:
     .string "PETREL: Since disbanding Team\n"
     .string "Rocket three years ago, our\l"
-    .string "Giovanni has been missing.\p"
+    .string "GIOVANNI has been missing.\p"
     .string "But we're certain he's been\n"
     .string "waiting for the right time for\l"
     .string "our revival... Wahahaha!\p"
