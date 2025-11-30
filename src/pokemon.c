@@ -9284,25 +9284,25 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem)
                 break;
             case EVO_LEVEL_NIGHT:
                 UpdateTimeOfDay();
-                if (gLocalTime.hours >= 0 && gLocalTime.hours < 7 && gEvolutionTable[species][i].param <= level)
+                if (gLocalTime.hours >= 0 && gLocalTime.hours < 6 && gEvolutionTable[species][i].param <= level)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                if (gLocalTime.hours >= 17 && gLocalTime.hours < 24 && gEvolutionTable[species][i].param <= level)
+                if (gLocalTime.hours >= 18 && gLocalTime.hours < 24 && gEvolutionTable[species][i].param <= level)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_LEVEL_DAY:
                 UpdateTimeOfDay();
-                if (gLocalTime.hours >= 6 && gLocalTime.hours < 17 && gEvolutionTable[species][i].param <= level)
+                if (gLocalTime.hours >= 6 && gLocalTime.hours < 18 && gEvolutionTable[species][i].param <= level)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_ITEM_HOLD_NIGHT:
                 UpdateTimeOfDay();
-                if (gLocalTime.hours >= 0 && gLocalTime.hours < 7 && heldItem == gEvolutionTable[species][i].param)
+                if (gLocalTime.hours >= 0 && gLocalTime.hours < 6 && heldItem == gEvolutionTable[species][i].param)
                 {
                     heldItem = 0;
                     SetMonData(mon, MON_DATA_HELD_ITEM, &heldItem);
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 }
-                if (gLocalTime.hours >= 17 && gLocalTime.hours < 24 && heldItem == gEvolutionTable[species][i].param)
+                if (gLocalTime.hours >= 18 && gLocalTime.hours < 24 && heldItem == gEvolutionTable[species][i].param)
                 {
                     heldItem = 0;
                     SetMonData(mon, MON_DATA_HELD_ITEM, &heldItem);
