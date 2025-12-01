@@ -54,7 +54,7 @@ EWRAM_DATA struct BattleMsgData *gBattleMsgDataPtr = NULL;
 
 static const u8 sText_Trainer1LoseText[] = _("{B_TRAINER1_LOSE_TEXT}");
 static const u8 sText_PkmnGainedEXP[] = _("{B_BUFF1} gained{B_BUFF2}\n{B_BUFF3} EXP. Points!\p");
-static const u8 sText_PkmnGainedEXPAll[] = _("The rest of your team gained EXP.\nPoints thanks to the EXP SHARE.\p");
+static const u8 sText_PkmnGainedEXPAll[] = _("The rest of your team gained EXP.\nPoints thanks to the EXP. SHARE.\p");
 static const u8 sText_EmptyString4[] = _("");
 static const u8 sText_ABoosted[] = _(" a boosted");
 static const u8 sText_PkmnGrewToLv[] = _("{B_BUFF1} grew to\nLV. {B_BUFF2}!{WAIT_SE}\p");
@@ -2163,6 +2163,8 @@ void BufferStringBattle(u16 stringID)
                         stringPtr = sText_WildPkmnAppeared;
                     else if (gSaveBlock2Ptr->optionsRunType == 3)
                         stringPtr = sText_WildPkmnAppeared_B;
+                    else 
+                        stringPtr = sText_WildPkmnAppearedOld;
                 }
                 else if (gSaveBlock2Ptr->optionsLRtoRun == 1)
                     stringPtr = sText_WildPkmnAppearedOld;
@@ -2864,20 +2866,7 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                 break;
             case B_TXT_PARTNER_NAME:
                 GetFrontierTrainerName(text, gPartnerTrainerId);
-                #ifdef BATTLE_ENGINE
-                    if (gPartnerSpriteId == TRAINER_BACK_PIC_BRENDAN
-                      || gPartnerSpriteId == TRAINER_BACK_PIC_MAY)
-                    {
-                        toCpy = gSaveBlock2Ptr->rivalName;
-                    }
-                    else
-                    {
-                        GetFrontierTrainerName(text, gPartnerTrainerId);
-                        toCpy = text;
-                    }
-                #else
-                    toCpy = gTrainers[TRAINER_MAY_ROUTE_103_MUDKIP].trainerName;
-                #endif
+                toCpy = text;
                 break;
             case B_TXT_RIVAL_NAME:
                 toCpy = gSaveBlock2Ptr->rivalName;

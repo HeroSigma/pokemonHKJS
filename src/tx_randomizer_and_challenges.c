@@ -45,6 +45,8 @@ bool8 IsRandomizerActivated(void)
 
 bool8 IsRandomItemsActivated(void)
 {
+    if (!FlagGet(FLAG_RECEIVED_FIRST_BALLS))   //Don't randomize starting items
+        return FALSE;
     return gSaveBlock1Ptr->tx_Random_Items;
 }
 
@@ -110,6 +112,19 @@ bool8 IsNuzlockeNicknamingActive(void)
         return FALSE;
 
     return gSaveBlock1Ptr->tx_Nuzlocke_Nicknaming;
+}
+
+
+void ToggleShinyColors(void)
+{
+    if (gSaveBlock1Ptr->tx_Features_ShinyColors == 1)
+    {
+        gSaveBlock1Ptr->tx_Features_ShinyColors = 0; //Old shinies
+    }
+    else
+    {
+        gSaveBlock1Ptr->tx_Features_ShinyColors = 1; //New shinies
+    }
 }
 
 bool8 IsPokecenterChallengeActivated(void)

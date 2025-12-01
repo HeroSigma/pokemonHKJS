@@ -1654,9 +1654,27 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
     {
         // copies random starter species into VAR_TEMP_2
         species = GetStarterPokemon(VarGet(VAR_STARTER_MON));
-        VarSet(VAR_TEMP_2, species);
+        if (IsOneTypeChallengeActive() && (gSaveBlock1Ptr->tx_Challenges_OneTypeChallenge == TYPE_DRAGON) && (species == 0))
+            VarSet(VAR_TEMP_2, SPECIES_DRATINI);
+        else if (IsOneTypeChallengeActive() 
+        && ((gSaveBlock1Ptr->tx_Challenges_OneTypeChallenge == TYPE_NORMAL) || (gSaveBlock1Ptr->tx_Challenges_OneTypeChallenge == TYPE_FAIRY)  
+        && (species == SPECIES_TOGEPI)))
+            VarSet(VAR_TEMP_2, SPECIES_CLEFFA);
+        else if ((gSaveBlock1Ptr->tx_Random_Starter == TRUE) && (species == SPECIES_TOGEPI))
+            VarSet(VAR_TEMP_2, SPECIES_CLEFFA);
+        else
+            VarSet(VAR_TEMP_2, species);
     }
-    ScriptMenu_ShowPokemonPic(species, x, y);
+    if (IsOneTypeChallengeActive() && (gSaveBlock1Ptr->tx_Challenges_OneTypeChallenge == TYPE_DRAGON) && (species == 0))
+        ScriptMenu_ShowPokemonPic(SPECIES_DRATINI, x, y);
+    else if (IsOneTypeChallengeActive() 
+    && ((gSaveBlock1Ptr->tx_Challenges_OneTypeChallenge == TYPE_NORMAL) || (gSaveBlock1Ptr->tx_Challenges_OneTypeChallenge == TYPE_FAIRY)  
+    && (species == SPECIES_TOGEPI)))
+        ScriptMenu_ShowPokemonPic(SPECIES_CLEFFA, x, y);
+    else if ((gSaveBlock1Ptr->tx_Random_Starter == TRUE) && (species == SPECIES_TOGEPI))
+        ScriptMenu_ShowPokemonPic(SPECIES_CLEFFA, x, y);
+    else
+        ScriptMenu_ShowPokemonPic(species, x, y);
     return FALSE;
 }
 
@@ -1769,8 +1787,28 @@ bool8 ScrCmd_buffermoncategory(struct ScriptContext *ctx)
     u16 species = VarGet(ScriptReadHalfword(ctx));
 
     species = GetStarterPokemon(VarGet(VAR_STARTER_MON));
-    VarSet(VAR_TEMP_2, species);
-    StringCopy(sScriptStringVars[stringVarIndex], GetPokedexCategoryName(SpeciesToNationalPokedexNum(species)));
+    if (IsOneTypeChallengeActive() && (gSaveBlock1Ptr->tx_Challenges_OneTypeChallenge == TYPE_DRAGON) && (species == 0))
+    {
+        VarSet(VAR_TEMP_2, SPECIES_DRATINI);
+        StringCopy(sScriptStringVars[stringVarIndex], GetPokedexCategoryName(SpeciesToNationalPokedexNum(SPECIES_DRATINI)));
+    }
+    else if (IsOneTypeChallengeActive() 
+    && ((gSaveBlock1Ptr->tx_Challenges_OneTypeChallenge == TYPE_NORMAL) || (gSaveBlock1Ptr->tx_Challenges_OneTypeChallenge == TYPE_FAIRY)  
+    && (species == SPECIES_TOGEPI)))
+    {
+        VarSet(VAR_TEMP_2, SPECIES_CLEFFA);
+        StringCopy(sScriptStringVars[stringVarIndex], GetPokedexCategoryName(SpeciesToNationalPokedexNum(SPECIES_CLEFFA)));
+    }
+    else if ((gSaveBlock1Ptr->tx_Random_Starter == TRUE) && (species == SPECIES_TOGEPI))
+    {
+        VarSet(VAR_TEMP_2, SPECIES_CLEFFA);
+        StringCopy(sScriptStringVars[stringVarIndex], GetPokedexCategoryName(SpeciesToNationalPokedexNum(SPECIES_CLEFFA)));
+    }
+    else
+    {
+        VarSet(VAR_TEMP_2, species);
+        StringCopy(sScriptStringVars[stringVarIndex], GetPokedexCategoryName(SpeciesToNationalPokedexNum(species)));
+    }
     return FALSE;
 }
 

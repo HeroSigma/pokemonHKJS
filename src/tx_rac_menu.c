@@ -537,7 +537,7 @@ static const u8 sText_Starter[] =                   _("STARTER POKéMON");
 static const u8 sText_WildPkmn[] =                  _("WILD POKéMON");
 static const u8 sText_Trainer[] =                   _("TRAINER");
 static const u8 sText_Static[] =                    _("STATIC POKéMON");
-static const u8 sText_SimiliarEvolutionLevel[] =    _("BALANCE ON TIERS");
+static const u8 sText_SimiliarEvolutionLevel[] =    _("BALANCING");
 static const u8 sText_InlcudeLegendaries[]=         _("LEGENDARIES");
 static const u8 sText_Type[] =                      _("TYPE");
 static const u8 sText_Moves[] =                     _("MOVES");
@@ -573,7 +573,7 @@ static const u8 sText_SpeciesClause[]   = _("DUPES CLAUSE");
 static const u8 sText_ShinyClause[]     = _("SHINY CLAUSE");
 static const u8 sText_Nicknaming[]      = _("NICKNAMES");
 static const u8 sText_Deletion[]        = _("FAINTING");
-static const u8 sText_RareCandy[]       = _("INF RARE CANDY");
+static const u8 sText_RareCandy[]       = _("INF. RARE CANDY");
 
 static const u8 *const sOptionMenuItemsNamesNuzlocke[MENUITEM_NUZLOCKE_COUNT] =
 {
@@ -624,7 +624,7 @@ static const u8 sText_PCHeal[]              = _("PC HEALS {PKMN}");
 static const u8 sText_Expensive[]           = _("ULTRA EXPENSIVE!");
 static const u8 sText_EvoLimit[]            = _("EVO LIMIT");
 static const u8 sText_OneTypeChallenge[]    = _("ONE TYPE ONLY");
-static const u8 sText_BaseStatEqualizer[]   = _("STAT EQUALIZER");
+static const u8 sText_BaseStatEqualizer[]   = _("BST EQUALIZER");
 static const u8 sText_Mirror[]              = _("MIRROR MODE");
 static const u8 sText_MirrorThief[]         = _("MIRROR THIEF");
 static const u8 sText_Save[]                = _("SAVE");
@@ -868,8 +868,8 @@ static const u8 sText_Description_Random_WildPokemon_Off[]          = _("Same wi
 static const u8 sText_Description_Random_WildPokemon_On[]           = _("Randomize wild POKéMON.");
 static const u8 sText_Description_Random_Trainer_Off[]              = _("Trainer will have their expected\nparty.");
 static const u8 sText_Description_Random_Trainer_On[]               = _("Randomize enemy trainer parties.");
-static const u8 sText_Description_Random_Static_Off[]               = _("Static encounter will be the same\nas in the base game.");
-static const u8 sText_Description_Random_Static_On[]                = _("Randomize static {PKMN} encounters.\nSome special {PKMN} stay unchanged!");
+static const u8 sText_Description_Random_Static_Off[]               = _("Static encounters will be the same\nas in the base game.");
+static const u8 sText_Description_Random_Static_On[]                = _("Named {PKMN}, casino {PKMN}, roamers, and\nsome other special {PKMN} won't change.");
 static const u8 sText_Description_Random_BalanceTiers_Off[]         = _("Distribution of POKéMON {COLOR 7}{COLOR 8}not balanced{COLOR 1}{COLOR 2}\naround their strength!");
 static const u8 sText_Description_Random_BalanceTiers_On[]          = _("{PKMN} replaced with similar tiered ones.\nCurrently based on evo stages.");
 static const u8 sText_Description_Random_IncludeLegendaries_Off[]   = _("Legendary POKéMON will not be\nincluded and randomized.");
@@ -886,7 +886,7 @@ static const u8 sText_Description_Random_Evo_Methods_Off[]          = _("The POK
 static const u8 sText_Description_Random_Evo_Methods_On[]           = _("Randomize evolution lines. Allows\nnew evolution lines to occure!");
 static const u8 sText_Description_Random_Effectiveness_Off[]        = _("Type effectiveness chart will remain\nthe same as in the base game.");
 static const u8 sText_Description_Random_Effectiveness_On[]         = _("Randomize type effectiveness.\n{COLOR 7}{COLOR 8}WARNING: CAN BE BUGGY!");
-static const u8 sText_Description_Random_Items_Off[]                = _("All found or recieved items are the\nsame as in the base game.");
+static const u8 sText_Description_Random_Items_Off[]                = _("All found or received items are the\nsame as in the base game.");
 static const u8 sText_Description_Random_Items_On[]                 = _("Randomize found, hidden and revieved\nitems. KEY items are excluded!");
 static const u8 sText_Description_Random_ChaosMode_Off[]            = _("Chaos mode disabled.");
 static const u8 sText_Description_Random_ChaosMode_On[]             = _("Every above chosen option will be\nvery chaotic. {COLOR 7}{COLOR 8}NOT recommended!");
@@ -937,7 +937,7 @@ static const u8 *const sOptionMenuItemDescriptionsNuzlocke[MENUITEM_NUZLOCKE_COU
     [MENUITEM_NUZLOCKE_NEXT]                = {sText_Description_Nuzlocke_Next,                 sText_Empty,                                        sText_Empty,                        sText_Empty},
 };
 
-static const u8 sText_Description_Difficulty_Party_Limit[]              = _("Limit the amount of POKéMON in the\nplayers party.");
+static const u8 sText_Description_Difficulty_Party_Limit[]              = _("Limits the amount of {PKMN} in the party.\n{COLOR 7}{COLOR 8}“1” has visual bugs in DOUBLE BATTLES.");
 static const u8 sText_Description_Difficulty_LevelCap_Base[]            = _("No level cap. Overleveling possible.\n");
 static const u8 sText_Description_Difficulty_LevelCap_Normal[]          = _("Maximum level is based on the\nnext gym's highest POKéMON level.");
 static const u8 sText_Description_Difficulty_LevelCap_Hard[]            = _("Maximum level is based on the\nnext gym's {COLOR 7}{COLOR 8}lowest POKéMON level.");

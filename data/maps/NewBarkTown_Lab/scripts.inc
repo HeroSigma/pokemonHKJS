@@ -672,7 +672,7 @@ NewBarkTown_Lab_Text_ElmMissionFromMrPokemon:
 
 NewBarkTown_Lab_Text_ElmChooseAPokemon:
 	.string "I want you to raise one of\n"
-	.string "the POKéMON contained in these Balls.\p"
+	.string "the POKéMON contained in these BALLS.\p"
 	.string "You'll be that POKéMON's\n"
 	.string "first partner, {PLAYER}!\p"
 	.string "Go on. Pick one!$"
@@ -873,14 +873,14 @@ NewBarkTown_Lab_Text_KimonoGirls:
 	.string "I hope you'll carry through it.$"
 
 NewBarkTown_Lab_Text_KimonoWaiting:
-	.string "PROF. ELM: The KIMONO\n"
+	.string "PROF.ELM: The KIMONO\n"
 	.string "GIRLS are waiting for you at\l"
 	.string "the ECRUTEAK DANCE THEATER.$"
 
 NewBarkTown_Lab_Text_League:
-	.string "PROF. ELM: Hahaha...\n"
+	.string "PROF.ELM: Hahaha...\n"
 	.string "Good job!\p"
-	.string "That rare Egg has brought you\n"
+	.string "That rare EGG has brought you\n"
 	.string "a lot of trouble, huh?\p"
 	.string "The KIMONO GIRLS said something\n"
 	.string "about me?\p"
@@ -888,9 +888,9 @@ NewBarkTown_Lab_Text_League:
 	.string "You made your decision and went\n"
 	.string "through with it.\p"
 	.string "Having done so much, you should\n"
-	.string "be able to face the League now!\p"
-	.string "You should head for Indigo\n"
-	.string "Plateau!\p"
+	.string "be able to face the LEAGUE now!\p"
+	.string "You should head for INDIGO\n"
+	.string "PLATEAU!\p"
 	.string "Do you know how to get there?\n"
 	.string "Follow ROUTE 27 to ROUTE 26.\p"
 	.string "Once there, go straight north!$"

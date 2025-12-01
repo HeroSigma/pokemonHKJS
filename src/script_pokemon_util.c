@@ -115,7 +115,22 @@ u8 ScriptGiveMon(u16 species, u8 level, u16 item, u32 unused1, u32 unused2, u8 u
         IsOneTypeChallengeActive() && (FlagGet(FLAG_SYS_POKEMON_GET) == FALSE))
     {
         species = GetStarterPokemon(VarGet(VAR_STARTER_MON));
-        CreateMon(&mon, species, level, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+        //Fixes Missigno appearing in Monotype Dragon runs, as the game lacks Dragon species
+        if (IsOneTypeChallengeActive() && (gSaveBlock1Ptr->tx_Challenges_OneTypeChallenge == TYPE_DRAGON) && (species == 0))
+            CreateMon(&mon, SPECIES_DRATINI, level, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+        //Fixes the infamous and popular cult classic horror story "The Topepi of Terror" when selecting a starter.
+        //Bug might happen if you still catch a Togepi in the wild before getting the expected Togepi egg in Violet City.
+        //First, if in Normal or Fairy type Monotype run and you see a Togepi, it gets re-rolled into CLEFFA. 
+        //Doesn't take into account randomizer because it's not relevant here.
+        else if (IsOneTypeChallengeActive() 
+        && ((gSaveBlock1Ptr->tx_Challenges_OneTypeChallenge == TYPE_NORMAL) || (gSaveBlock1Ptr->tx_Challenges_OneTypeChallenge == TYPE_FAIRY)  
+        && (species == SPECIES_TOGEPI)))
+            CreateMon(&mon, SPECIES_CLEFFA, level, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+        //If not playing a Normal or Fairy type Monorun, but you're using Random Starters and a Togepi is set as a starter, re-roll into CLEFFA.
+        else if ((gSaveBlock1Ptr->tx_Random_Starter == TRUE) && (species == SPECIES_TOGEPI))
+            CreateMon(&mon, SPECIES_CLEFFA, level, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+        else
+            CreateMon(&mon, species, level, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
     }
      //If the static randomizer is on, and you got your first Pokémon already, givemons will be randomized
     else if ((gSaveBlock1Ptr->tx_Random_Static) && (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE))
@@ -231,7 +246,6 @@ void CreateShinyScriptedMon(u16 species, u8 level, u16 item)
         species = GetSpeciesRandomSeeded(species, TX_RANDOM_T_STATIC, 0);
     if (gSaveBlock1Ptr->tx_Random_Items)
         item = RandomItemId(item);
-    SetNuzlockeChecks();
     ZeroEnemyPartyMons();
 
     u32 otId = gSaveBlock2Ptr->playerTrainerId[0]
@@ -248,7 +262,7 @@ void CreateShinyScriptedMon(u16 species, u8 level, u16 item)
         heldItem[1] = item >> 8;
         SetMonData(&gEnemyParty[0], MON_DATA_HELD_ITEM, heldItem);
     }
-
+    SetNuzlockeChecks();
 }
 
 void ScriptSetMonMoveSlot(u8 monIndex, u16 move, u8 slot)

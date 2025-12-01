@@ -69,7 +69,7 @@ Debug_Script_1_Text2:
 	.string "WILL HAVE TO ENABLE THEM AGAIN.$"
 
 Debug_Script_2::
-	special NameRival
+	special ToggleShinyColors
 	end
 
 Debug_Script_3::
